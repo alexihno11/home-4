@@ -1,76 +1,78 @@
-﻿// See https://aka.ms/new-console-template for more information
-// Console.WriteLine("Hello, World!");
+﻿// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 
+// [345, 897, 568, 234] -> 2
 
-// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// Console.WriteLine("vvedite razmer massiva:  ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] numbers = new int[size];
+// ZapolniteMassivRandomNumbers(numbers);
+// Console.WriteLine("massiv: ");
+// PrintArray(numbers);
+// int count = 0;
 
-// 3, 5 -> 243 (3⁵)
+// for (int s = 0; s < numbers.Length; s++)
+// if (numbers[s] % 2 == 0)
+// count++;
 
-// 2, 4 -> 16
+// Console.WriteLine($"vsego {numbers.Length} chisel, {count} из них чётные");
 
-// Console.Write("Введите число A: ");
-// Console.Write("Введите число B: ");
-// int firstNum = Convert.ToInt32(Console.ReadLine());
-// int secNum = Convert.ToInt32(Console.ReadLine());
-
-// for (int i = 1; i <= secNum; i++)
+// void ZapolniteMassivRandomNumbers(int[] numbers)
 // {
-//   result = result * firstNum;
-// }
-
-
-// return result;
-
-
-// Console.WriteLine("Ответ: " + firstNu);
-
-// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-
-// 452 -> 11
-
-// 82 -> 10
-
-// 9012 -> 12
-
-// Console.Write("Введите число : ");
-// int number = Convert.ToInt32(Console.ReadLine());
-//   int SumNumber(int number)
-//   {
-    
-//     int count = Convert.ToString(number).Length;
-//     int raznica = 0;
-//     int result = 0;
-
-//     for (int i = 0; i < count; i++)
+//     for(int i = 0; i < numbers.Length; i++)
 //     {
-//       raznica = number - number % 10;
-//       result = result + (number - raznica);
-//       number = number / 10;
+//         numbers[i] = new Random().Next(100,1000);
 //     }
-//    return result;
+// }
+// void PrintArray(int[] numbers)
+// {
+//     Console.Write("[ ");
+//     for(int i = 0; i < numbers.Length; i++)
+//     {
+//         Console.Write(numbers[i] + " ");
+//     }
+//     Console.Write("]");
+//     Console.WriteLine();
+// }
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// [3, 7, 23, 12] -> 19
+
+// [-4, -6, 89, 6] -> 0
+
+int[] ArrayNumbers = new int[4];
+int summ = 0;
+  for (int i = 1; i < ArrayNumbers.Length; i+=2 )
+  {
+    ArrayNumbers[i] = new Random().Next(1, 4);
+summ = ArrayNumbers + summ;
+    
+  }
+Console.Write(ArrayNumbers[i] + summ " ");
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+// [3 7 22 2 78] -> 76
+
+// double[] ArrayNumbers = new double[7];
+//   for (int i = 0; i < ArrayNumbers.Length; i++ )
+//   {
+//     ArrayNumbers[i] = new Random().Next(1, 7);
+//     Console.Write(ArrayNumbers[i] + " ");
 //   }
+// double maxNumber = ArrayNumbers[0];
+// double minNumber = ArrayNumbers[0];
 
-// int sumNumber = SumNumber(number);
-// Console.WriteLine("Сумма цифр: " + sumNumber);
-
-// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
-
-// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
-
-// 6, 1, 33 -> [6, 1, 33]
-
-// int[] array = GetBinaryArray(8);
-// Console.Write($"[{String.Join(",", array)}]");
-// int[] GetBinaryArray(int size)
-// {
-// int[] result = new int[size];
-// // new int[size] - массив размером size элементов
-// // заполнен массив "0"
-// // result.Length = size
-// for (int i = 0; i < result.Length; i++)
-// {
-// result[i] = new Random().Next(99);// [0;99)
-// // (2) - считаем, что числа от 0 до 100 (100 не включается)
-// }
-// return result; // int [] result
-// }
+//   for (int i = 1; i < ArrayNumbers.Length; i++)
+//   {
+//     if (maxNumber < ArrayNumbers[i])
+//     {
+//       maxNumber = ArrayNumbers[i];
+//     }
+//         if (minNumber > ArrayNumbers[i])
+//     {
+//       minNumber = ArrayNumbers[i];
+//     }
+//   }
+//   double advance = maxNumber - minNumber;
+//   Console.WriteLine($"\nразница между между макс. ({maxNumber}) и мин/({minNumber}) элементами: {advance}");
