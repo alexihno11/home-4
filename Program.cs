@@ -1,43 +1,41 @@
-﻿
+﻿// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
-// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+// 0, 7, 8, -2, -2 -> 2
 
-// [3, 7, 23, 12] -> 19
+// 1, -7, 567, 89, 223-> 3
 
-// [-4, -6, 89, 6] -> 0
 
-// int[] ArrayNumbers = new int[4];
-// int summ = 0;
-//   for (int i = 1; i < ArrayNumbers.Length; i+=2 )
-//   {
-//     ArrayNumbers[i] = new Random().Next(1, 4);
-// summ = ArrayNumbers + summ;
-//   }
-// Console.Write(ArrayNumbers[i] + summ " ");
 
-// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// Console.WriteLine($"Кол-во элементов > 0: {count}");
 
-// [3 7 22 2 78] -> 76
-
-// double[] ArrayNumbers = new double[7];
-//   for (int i = 0; i < ArrayNumbers.Length; i++ )
-//   {
-//     ArrayNumbers[i] = new Random().Next(1, 7);
-//     Console.Write(ArrayNumbers[i] + " ");
-//   }
-// double maxNumber = ArrayNumbers[0];
-// double minNumber = ArrayNumbers[0];
-
-//   for (int i = 1; i < ArrayNumbers.Length; i++)
-//   {
-//     if (maxNumber < ArrayNumbers[i])
+// Console.Write("Введите количество чисел(через пробел): ");
+// int[] m = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+// int count = 0;
+ 
+// for (int i = 0; i < m.Length; i++)
+// {
+//     if (m[i] > 0)
 //     {
-//       maxNumber = ArrayNumbers[i];
+//         count++;
 //     }
-//         if (minNumber > ArrayNumbers[i])
-//     {
-//       minNumber = ArrayNumbers[i];
-//     }
-//   }
-//   double advance = maxNumber - minNumber;
-//   Console.WriteLine($"\nразница между между макс. ({maxNumber}) и мин/({minNumber}) элементами: {advance}");
+// }
+ 
+// Console.WriteLine($"Количество элементов > 0: {count}");
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+
+// double k1 = 5; 
+// double b1 = 2;
+// double k2 = 9;
+// double b2 = 4;
+ 
+ 
+// double x = -(b1 - b2) / (k1 - k2);//-0,5 - ответ
+// double y = k1 * x + b1;//-0,5 - ответ
+ 
+
+ 
+// Console.WriteLine($"Пересечение в точке: ({x};{y})");
